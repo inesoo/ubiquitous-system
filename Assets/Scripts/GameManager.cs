@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public int Score = 0;
+
+    public GameObject PigLeftPrefab;
+    public GameObject PigRightPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +19,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void PlusScore() {
+        Score++;
     }
 }

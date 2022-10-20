@@ -17,7 +17,7 @@ public class move : MonoBehaviour
     {
         if (Input.touchCount > 0 ) 
         {
-            rb2d.velocity = new Vector2(0, 2 * speedJump);
+            rb2d.velocity = new Vector2(0, speedJump);
         }
     }
 }

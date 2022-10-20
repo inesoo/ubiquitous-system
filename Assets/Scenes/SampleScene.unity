@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 567255133}
   - component: {fileID: 567255134}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Tuyau B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,7 +233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567255131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -1.4348463, z: 0}
+  m_LocalPosition: {x: -0.03, y: -1.364, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -479,8 +479,8 @@ GameObject:
   - component: {fileID: 1277997350}
   - component: {fileID: 1277997354}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: Tuyau A
+  m_TagString: Tuyau
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,10 +497,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc941494de4af0448f7b5cd609bb93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedJump: 5
+  speedJump: 8
 --- !u!212 &1277997352
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -579,7 +579,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277997349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.58, z: 0}
+  m_LocalPosition: {x: 0, y: 4.82, z: 0}
   m_LocalScale: {x: 1, y: 7.223203, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -653,7 +653,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &1580153952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -763,3 +763,6 @@ MonoBehaviour:
   jump: 5
   reloading: 1
   reloadjump: 1
+  TiwuoooooBack: 1
+  forceBump: 4
+  BoxCollider2D: {fileID: 1580153952}
