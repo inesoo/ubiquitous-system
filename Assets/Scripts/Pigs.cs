@@ -12,6 +12,8 @@ public class Pigs : MonoBehaviour
     public bool reloading;
     public float reloadjump;
 
+    public bool TiwuoooooBack;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,11 @@ public class Pigs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(speed, rb.velocity.y);
+        if (TiwuoooooBack) {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+        } else {
+            rb.velocity = new Vector2(-speed, rb.velocity.y);
+        }
 
         if (reloading) {
             rb.velocity = new Vector2(rb.velocity.x, jump);
