@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
                 
             }
         }
+        
         /*if (vie <= 0) {
             GameManager.Instance.panelLose.SetActive(true);
             mort.Play();
