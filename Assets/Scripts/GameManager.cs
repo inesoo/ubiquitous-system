@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject panelLose;
+    public static GameManager Instance;
+    private void Awake(){
+        Instance = this;
+    }
+    
     public int Score = 0;
     public int Vies = 3;
 
@@ -46,6 +52,10 @@ public class GameManager : MonoBehaviour
                 
             }
         }
+        /*if (vie <= 0) {
+            GameManager.Instance.panelLose.SetActive(true);
+            mort.Play();
+        }*/
 
         if (Score >= 5 && Score < 10) {
 
@@ -56,16 +66,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void PlusScore() {
-        Score++;
-    }
-
-    void Crounch() {
-        Vies -= 1;
-    }
-
     IEnumerator waitSpawn() {
         yield return new WaitForSeconds(reloadSpawn);
         reloading = false;
+    }
+
+    public void MyloadScene(int idScene){
+        UnityEngine.SceneManagement.SceneManager.LoadScene(idScene);
     }
 }

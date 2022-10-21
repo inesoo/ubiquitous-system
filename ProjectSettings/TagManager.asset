@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tuyau
+  - Pig
+  - stop
   layers:
   - Default
   - TransparentFX
