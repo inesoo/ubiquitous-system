@@ -6,7 +6,6 @@ public class Tuyau : MonoBehaviour
 {
     // Ce script se met sur la porte qui devra s'ouvrir
     // ATTENTION il marche en binome avec un autre script : le script "levier"
-
     public float speed = 2f;                                            // Vitesse d'ouverture de la porte
     [SerializeField, Range(0.1f, 3000f)] private float destination = 5f;  // distance entre la porte et sa destination une fois ouverte (limité entre 0.1 et 50)
     [SerializeField, Range(0f, 360f)] private float RotationPath;       // Permet de faire pivoter le trajet de la porte
