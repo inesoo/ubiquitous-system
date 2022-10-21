@@ -50,13 +50,19 @@ public class Pigs : MonoBehaviour
         if (collision.gameObject.CompareTag("Tuyau")) {
             if (TiwuoooooBack) {
                 rb.velocity = new Vector2(-forceBump, rb.velocity.y);
-                transform.Rotate(0, 0, 5);
+                transform.Rotate(0, 0, 10);
             } else {
                 rb.velocity = new Vector2(forceBump, rb.velocity.y);
-                transform.Rotate(0, 0,-5);
+                transform.Rotate(0, 0,-10);
             }
             GetComponent<BoxCollider2D>().enabled = false;
             Destroy(this);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D truc) {
+        if (truc.tag == "Tuyau") {
+            Destroy(gameObject);
         }
     }
 }
