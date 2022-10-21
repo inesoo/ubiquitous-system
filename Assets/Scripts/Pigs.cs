@@ -18,11 +18,14 @@ public class Pigs : MonoBehaviour
 
     public BoxCollider2D BoxCollider2D;
 
+    public GameManager GameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         BoxCollider2D = FindObjectOfType<BoxCollider2D>();
+        GameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -56,6 +59,7 @@ public class Pigs : MonoBehaviour
                 transform.Rotate(0, 0,-10);
             }
             GetComponent<BoxCollider2D>().enabled = false;
+            GameManager.Rate();
             Destroy(this);
         }
     }

@@ -10,10 +10,15 @@ public class move : MonoBehaviour
     public float speedJump = 5;
     private Rigidbody2D rb2d;
 
+    public ParticleSystem SANG;
+
+    public GameManager GameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        GameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -35,6 +40,10 @@ public class move : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         TuyauA.GetComponent<Tuyau>().fermeture();
         TuyauB.GetComponent<Tuyau>().fermeture();
+
+        GameManager.Crouch();
+        SANG.Play();
+
         yield return new WaitForSeconds(0.2f);
         TuyauA.GetComponent<Tuyau>().stopTout();
         TuyauB.GetComponent<Tuyau>().stopTout();
