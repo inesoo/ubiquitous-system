@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public int Score = 0;
+    public int Vies = 3;
 
     public float reloadSpawn;
     private bool reloading;
@@ -58,7 +61,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Crounch() {
-
+        Vies -= 1;
     }
 
     IEnumerator waitSpawn() {
